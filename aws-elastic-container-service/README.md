@@ -12,3 +12,10 @@
 - `$ aws ecs create-cluster --cli-input-json file://ecs-cluster.json`
 
 ### 2.1.1 [reference link](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-cluster.html)
+
+# 3. create ECS task-definition
+
+# 4. create ECS service
+
+# etc Load Balancer
+### [reference](https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/application/introduction.html)
