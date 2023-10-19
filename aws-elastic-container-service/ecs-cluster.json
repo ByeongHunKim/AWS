@@ -1,0 +1,10 @@
+{
+  "clusterName": "cluster",
+  "capacityProviders": ["FARGATE"],
+  "defaultCapacityProviderStrategy": [
+    {
+      "capacityProvider": "FARGATE",
+      "weight": 1
+    }
+  ]
+}
