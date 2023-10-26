@@ -1,0 +1,17 @@
+cluster:
+taskDefinition:
+networkConfiguration:
+  awsvpcConfiguration:
+    subnets:
+      -
+    securityGroups:
+      -
+    assignPublicIp: ENABLED
+desiredCount: 1
+launchType: FARGATE
+platformVersion: LATEST
+schedulingStrategy: REPLICA
+deploymentController:
+  type: ECS
+enableECSManagedTags: true
+propagateTags: SERVICE

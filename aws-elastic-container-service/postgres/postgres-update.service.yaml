@@ -1,0 +1,12 @@
+cluster:
+taskDefinition:
+networkConfiguration:
+  awsvpcConfiguration:
+    subnets:
+      -
+    securityGroups:
+      -
+    assignPublicIp: ENABLED
+desiredCount: 1
+platformVersion: LATEST
+enableECSManagedTags: true

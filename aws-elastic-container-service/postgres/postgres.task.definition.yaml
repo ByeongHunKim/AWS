@@ -1,0 +1,37 @@
+family:
+requiresCompatibilities:
+- FARGATE
+runtimePlatform:
+  operatingSystemFamily: LINUX
+  cpuArchitecture: ARM64
+networkMode: awsvpc
+cpu: '512'
+memory: '1024'
+taskRoleArn: ''
+executionRoleArn:
+containerDefinitions:
+- name: postgres
+  image: postgres:15.3
+  essential: true
+  portMappings:
+  - name: postgres-5432-tcp
+    containerPort: 5432
+    hostPort: 5432
+    protocol: tcp
+  readonlyRootFilesystem: false
+  cpu: 512
+  memory: 1024
+  environment:
+  - name: POSTGRES_DB
+    value:
+  - name: POSTGRES_USER
+    value:
+  - name: POSTGRES_PASSWORD
+    value:
+  logConfiguration:
+    logDriver: awslogs
+    options:
+      awslogs-create-group: 'true'
+      awslogs-group: /ecs/
+      awslogs-region: ap-northeast-2
+      awslogs-stream-prefix: ecs
