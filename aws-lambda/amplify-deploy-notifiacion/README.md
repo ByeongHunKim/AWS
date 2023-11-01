@@ -30,5 +30,6 @@
 
 ---
 ## Troubleshooting
+- need to set lambda log group's `Retension` as 3days
 
 
