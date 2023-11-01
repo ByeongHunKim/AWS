@@ -5,25 +5,30 @@
 - Slack workspace and webhook URL
 - ... (any other prerequisites)
 
+---
+
 ## Setup
+### 1. Configuring Slack Webhook
+- [slack-link](https://api.slack.com/messaging/webhooks)
 
-### 1. Setting up the Lambda Function
+### 2. Setting up the Lambda Function
+- create lambda function in aws console
+  - use index.js
+- add environment
+    - `PROJECT_NAME`
+    - `SLACK_WEBHOOK_PATH`
+  
+### 3. Configuring the SNS Topic
 
+### 4. Linking Amplify with SNS
+- amplify must be created as `development` , `main`
 
-### 2. Configuring the SNS Topic
-
-
-### 3. Linking Amplify with SNS
-
-
-### 4. Configuring Slack Webhook
-
+---
 
 ## Testing the Notification
 ![img.png](img.png)
 
+---
 ## Troubleshooting
 
-
-## Conclusion
 
